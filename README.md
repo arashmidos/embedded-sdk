@@ -1,6 +1,6 @@
 # sample_outline_sdk
 
-A new Flutter project with embedded Ooutline VPN
+A new Flutter project with embedded Outline VPN
 
 ## Getting Started
 
