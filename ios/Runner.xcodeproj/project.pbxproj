@@ -16,7 +16,6 @@
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		B8BD54A751F8E9630414003A /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BA74A2FAC57B7B51B7CFA3 /* Pods_Runner.framework */; };
 		C02ED6392BD79ABA00ED0DC2 /* mobileproxy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02ED6382BD79ABA00ED0DC2 /* mobileproxy.xcframework */; };
-		C02ED63A2BD79ABA00ED0DC2 /* mobileproxy.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C02ED6382BD79ABA00ED0DC2 /* mobileproxy.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB0A6D7627F0F0D586EB0A3F /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3F89B75D2CC15E86FE3BEA /* Pods_RunnerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,20 +28,6 @@
 			remoteInfo = Runner;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C02ED63A2BD79ABA00ED0DC2 /* mobileproxy.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		02E09A532E3E262DDD7EC2DA /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
@@ -201,7 +186,6 @@
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
-				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				B325537F1DB560C7D5C79ACD /* [CP] Embed Pods Frameworks */,
 			);
@@ -659,6 +643,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/OrderedSet\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_inappwebview_ios\"",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -12,7 +12,7 @@ import Mobileproxy
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             
             let controller : FlutterViewController = window?.rootViewController as! FlutterViewController
-            let channel = FlutterMethodChannel(name: "samples.example.com/proxy",
+            let channel = FlutterMethodChannel(name: "sample.example.com/proxy",
                                                binaryMessenger: controller.binaryMessenger)
             channel.setMethodCallHandler({
                 (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in

@@ -11,7 +11,7 @@ import mobileproxy.Proxy
 
 class MainActivity : FlutterActivity() {
   private var proxy: Proxy? = null
-  private var port: Int? = null
+  private var port: String? = null
   private var key: String? = null
   private val CHANNEL = "sample.example.com/proxy"
 

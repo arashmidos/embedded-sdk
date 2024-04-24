@@ -38,7 +38,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   static const platform = MethodChannel('sample.example.com/proxy');
   static const String outlineKey = 'ss://<YOUR_OUTLINE_KEY>';
-  static const int port = 54321;
+  static const String port = '54321';
   final logger = Logger(printer: PrettyPrinter());
   late InAppWebViewController _controller;
   var loadingPercentage = 0;
@@ -83,6 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> disableWebviewProxy() async {
+    if (Platform.isIOS) return;
     ProxyController proxyController = ProxyController.instance();
     await proxyController.clearProxyOverride();
   }
